@@ -1,0 +1,37 @@
+basic:
+    name: 'HS1.com Request Info Form Monitoring'
+    environments:
+        production: 'https://www.henryscheinone.com/support/contact-us/'
+        staging: ''
+        development: ''
+    breakpoints:
+        - 640
+        - 1024
+        - 1200
+    pages:
+        - /
+    monitoring:
+        days: {  }
+        type: daily
+        schedule_time: '01:30 AM'
+        schedule_time_zone: America/Los_Angeles
+        compare_with: last-production
+        compare_with_fresh: production
+advanced:
+    mask: ''
+    remove: ''
+    isolate: ''
+    delay: 15
+    scroll: true
+    headers:
+        - { header: '', value: '' }
+    cookies: ''
+    custom_js: ''
+    custom_css: ''
+    mock_content: ''
+    performance:
+        workers_production: 30
+        workers_nonproduction: 10
+        workers_production_delay: 0
+        workers_nonproduction_delay: 0
+    stabilize: true
